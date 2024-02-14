@@ -30,66 +30,63 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const getCurrentTemp = (data) => {
-        const lastTenEntries = data.slice(-1);
-        return lastTenEntries.map(entry => entry[1]);
+        const currentTempData = data.slice(-2);
+        return currentTempData[0][1];
     }
     const getCurrentHumidity = (data) => {
-        const lastTenEntries = data.slice(-1);
-        return lastTenEntries.map(entry => entry[2]);
+        const currentHumidityData = data.slice(-2);
+        return currentHumidityData[0][2];
     }
     const getCurrentPressure = (data) => {
-        const lastTenEntries = data.slice(-1);
-        return lastTenEntries.map(entry => entry[3]);
+        const currentPressureData = data.slice(-2);
+        return currentPressureData[0][3];
     }
 
     function updateHumidityChart(data) {
-        //console.log('Labels:', getTimeLabels(data)); // Add this line for logging
-
         if (humidityChart) {
             humidityChart.destroy();
         } 
-            humidityChart = new Chart(humidityCanvas, {
-                type: 'line',
-                data: {
-                    labels: getTimeLabels(data),
-                    datasets: [{
-                        label: 'Humidity',
-                        data: getHumidityData(data),
-                        fill: false,
-                        borderColor: 'rgb(0, 0, 0)',
-                        backgroundColor: 'rgb(245,245,245)',
-                        tension: 0.1
+        humidityChart = new Chart(humidityCanvas, {
+            type: 'line',
+            data: {
+                labels: getTimeLabels(data),
+                datasets: [{
+                    label: 'Humidity',
+                    data: getHumidityData(data),
+                    fill: false,
+                    borderColor: 'rgb(0, 0, 0)',
+                    backgroundColor: 'rgb(245,245,245)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        type: 'time',
+                        time: {
+                            parser: 'MM/DD/YYYY H:mm',
+                            unit: 'hour',
+                            displayFormats: {
+                                hour: 'MM/DD/YYYY H:mm'
+                            }
+                        },
+                        ticks: {
+                            maxRotation: 0,
+                            minRotation: 0
+                        }
                     }]
                 },
-                options: {
-                    maintainAspectRatio: false,
-                    responsive: true,
-                    legend: {
-                        display: false
-                    },
-                    scales: {
-                        xAxes: [{
-                            type: 'time',
-                            time: {
-                                parser: 'MM/DD/YYYY H:mm',
-                                unit: 'hour',
-                                displayFormats: {
-                                    hour: 'MM/DD/YYYY H:mm'
-                                }
-                            },
-                            ticks: {
-                                maxRotation: 0,
-                                minRotation: 0
-                            }
-                        }]
-                    },
-                    animation: {
-                        duration: 0, // Set the duration of the animation to 0 to disable it
-                        //easing: 'linear' // Set the easing to 'linear' (optional, but can be used to customize)
-                    }
+                animation: {
+                    duration: 0, // Set the duration of the animation to 0 to disable it
+                    //easing: 'linear' // Set the easing to 'linear' (optional, but can be used to customize)
                 }
-            });
-        
+            }
+        });
     }
 
     function updateTemperatureChart(data) {
@@ -98,39 +95,38 @@ document.addEventListener("DOMContentLoaded", function () {
         if (temperatureChart) {
             temperatureChart.destroy();
         } 
-            temperatureChart = new Chart(temperatureCanvas, {
-                type: 'line',
-                data: {
-                    labels: getTimeLabels(data),
-                    datasets: [{
-                        label: 'Temperature',
-                        data: getTempData(data),
-                        fill: false,
-                        borderColor: 'rgb(0, 0, 0)',
-                        backgroundColor: 'rgb(245,245,245)',
-                        tension: 0.1
+        temperatureChart = new Chart(temperatureCanvas, {
+            type: 'line',
+            data: {
+                labels: getTimeLabels(data),
+                datasets: [{
+                    label: 'Temperature',
+                    data: getTempData(data),
+                    fill: false,
+                    borderColor: 'rgb(0, 0, 0)',
+                    backgroundColor: 'rgb(245,245,245)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            display: false
+                        }
                     }]
                 },
-                options: {
-                    maintainAspectRatio: false,
-                    responsive: true,
-                    legend: {
-                        display: false
-                    },
-                    scales: {
-                        xAxes: [{
-                            ticks: {
-                                display: false
-                            }
-                        }]
-                    },
-                    animation: {
-                        duration: 0, // Set the duration of the animation to 0 to disable it
-                        //easing: 'linear' // Set the easing to 'linear' (optional, but can be used to customize)
-                    }
+                animation: {
+                    duration: 0, // Set the duration of the animation to 0 to disable it
+                    //easing: 'linear' // Set the easing to 'linear' (optional, but can be used to customize)
                 }
-            });
-        
+            }
+        });
     }
 
     function updatePressureChart(data) {
@@ -139,41 +135,40 @@ document.addEventListener("DOMContentLoaded", function () {
         if (pressureChart) {
             pressureChart.destroy();
         } 
-            pressureChart = new Chart(pressureCanvas, {
-                type: 'line',
-                data: {
-                    labels: getTimeLabels(data),
-                    datasets: [{
-                        label: 'Pressure',
-                        data: getPressureData(data),
-                        fill: false,
-                        borderColor: 'rgb(0, 0, 0)',
-                        backgroundColor: 'rgb(245,245,245)',
-                        tension: 0.1
-                    }]
+        pressureChart = new Chart(pressureCanvas, {
+            type: 'line',
+            data: {
+                labels: getTimeLabels(data),
+                datasets: [{
+                    label: 'Pressure',
+                    data: getPressureData(data),
+                    fill: false,
+                    borderColor: 'rgb(0, 0, 0)',
+                    backgroundColor: 'rgb(245,245,245)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    display: false
                 },
-                options: {
-                    maintainAspectRatio: false,
-                    responsive: true,
-                    legend: {
-                        display: false
-                    },
-                    scales: {
-                        xAxes: [{
-                            ticks: {
-                                display: false
-                            }
-                        }]
-                        
-                    },
-                    animation: {
-                        duration: 0, // Set the duration of the animation to 0 to disable it
-                        //easing: 'linear' // Set the easing to 'linear' (optional, but can be used to customize)
-                    }
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            display: false
+                        }
+                    }]
                     
+                },
+                animation: {
+                    duration: 0, // Set the duration of the animation to 0 to disable it
+                    //easing: 'linear' // Set the easing to 'linear' (optional, but can be used to customize)
                 }
-            });
-        
+                
+            }
+        });  
     }
 
     function handleCSV(csvText) {
