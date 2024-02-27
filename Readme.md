@@ -24,8 +24,19 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
   - Codebase responsible for collecting and processing sensor data.
 
 ---
+## Github Page
+To view the contents of the Github Page from our Github:
 
-## Getting Started for Frontend
+1. Navigate to the 'NevilleElieh.github.io' folder
+
+   Here you will find:
+   JSON
+   Assets
+   Scripts
+   Style
+   Index.html
+
+## Frontend Setup at Home
 *Unreleased*
 
 To activate the virtual environment:
