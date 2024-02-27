@@ -1,6 +1,6 @@
-1. AstroCultivators - Codi Yost, Neville Elieh, Sandra Davis
-2. Post the git log information on your test repository
-3. Post your answers to this group discussion.
+AstroCultivators - Codi Yost, Neville Elieh, Sandra Davis
+
+Post your answers to this group discussion.
 	How many branches will you maintain, and what is each branch used for and who will be working on them?
 		Main - For release, or newest release of project - Maintained by Neville
 		Web Application - Sandra
