@@ -23,8 +23,8 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
   - Codebase responsible for collecting and processing sensor data.
 
 ---
-## Frontend Setup at Home
-*Unreleased*
+## Version 2 of Web Application Frontend
+*In Production*
 
 To activate the virtual environment:
 
