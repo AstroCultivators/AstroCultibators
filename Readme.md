@@ -42,3 +42,11 @@ python run.py
 
 The website will run locally on port 5000. You can access it in any browser by typing:
 localhost:5000
+
+## Version 1 of Current Live Web Application
+
+1. Navigate to the '/AstroCultivators/WebApp_BackEnd/astrocultivators_r1' folder.
+2. Run the following command:
+   python astrocultivators_web.py
+
+The website will be live on the web via the Jetson Orin's IP address.
