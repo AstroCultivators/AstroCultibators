@@ -10,7 +10,7 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
 
 ---
 
-## Project Components
+## Project Maintenence
 
 - **Main**:
   - *Maintained by Neville Elieh*
@@ -26,7 +26,8 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
 
 ---
 
-## Getting Started
+## Getting Started 
+*Unreleased*
 
 To activate the virtual environment:
 
