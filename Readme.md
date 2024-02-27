@@ -9,12 +9,12 @@ AstroCultivators - Codi Yost, Neville Elieh, Sandra Davis
 	 
 The autonomous farming system could be used to grow self-pollinating crops that require no human intervention. This system can decrease crew time needed to operate plant growth systems in by providing autonomous monitoring, real-time data reporting, environment management, automatic harvesting, and cleaning.
 
-to activate the virtual environment:
+    to activate the virtual environment:
     have the Astrocultivator_Web_App folder open in terminal
     run command
         .venv\Scripts\activate
 
-to run the website in debug mode:
+    to run the website in debug mode:
     have the Astrocultivator_Web_App folder open in terminal
     run command
         python run.py
