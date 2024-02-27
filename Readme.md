@@ -84,7 +84,7 @@ The website will be live on the web via the Jetson Orin's IP address.
 
 ---
 ## BME_Sensor
-The contents of this folder pertains to all operations of the BME Sensor.
+The contents of this folder pertains to all operations of the BME Sensor. Contains code on gathering sensor data, code that converts sensor data into a viewable CSV file (bound to change).
 
    1. Navigate to `BME_Sensor` folder.
         
