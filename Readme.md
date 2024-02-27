@@ -50,3 +50,9 @@ localhost:5000
    python astrocultivators_web.py
 
 The website will be live on the web via the Jetson Orin's IP address.
+
+## BME_SENSOR
+The contents of this folder pertains to all operations of the BME Sensor.
+
+1. Navigate to 'BME_Sensor' folder.
+   You will find python scripts for the sensor, sensor data, sample data, and notes.
