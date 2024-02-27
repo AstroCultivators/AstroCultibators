@@ -24,7 +24,35 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
   - *Maintained by Codi Yost*
   - Codebase responsible for collecting and processing sensor data.
 
+--- 
+## Repository Setup  
+```+---.vscode
++---bme_sensor
+|   \---Sensor_csv_data
++---Web Application
+|   +---.idea
+|   \---Front End
+|       +---python scripts
+|       \---Website
+|           \---.vs
+|               \---Website
+|                   +---config
+|                   +---FileContentIndex
+|                   \---v17
+\---WebApp_BackEnd
+    \---astrocultivators_r1
+        +---static
+        |   \---Website
+        |       \---.vs
+        |           \---Website
+        |               +---config
+        |               +---FileContentIndex
+        |               \---v17
+        \---templates
+```
+
 ---
+
 ## Version 2 of Web Application Frontend
 *In Production*
 
