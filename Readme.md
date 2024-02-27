@@ -26,7 +26,7 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
 
 ---
 
-## Getting Started 
+## Getting Started for Frontend
 *Unreleased*
 
 To activate the virtual environment:
