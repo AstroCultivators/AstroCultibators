@@ -39,10 +39,10 @@ To run the website in debug mode:
 2. Run the following command:
 python run.py
 
-
 The website will run locally on port 5000. You can access it in any browser by typing:
 localhost:5000
 
+---
 ## Version 1 of Current Live Web Application
 
 1. Navigate to the `/AstroCultivators/WebApp_BackEnd/astrocultivators_r1` folder.
@@ -51,8 +51,10 @@ localhost:5000
 
 The website will be live on the web via the Jetson Orin's IP address.
 
-## BME_SENSOR
+---
+## BME_Sensor
 The contents of this folder pertains to all operations of the BME Sensor.
 
-1. Navigate to 'BME_Sensor' folder.
+   1. Navigate to 'BME_Sensor' folder.
+        
    You will find python scripts for the sensor, sensor data, sample data, and notes.
