@@ -30,11 +30,12 @@ To view the contents of the Github Page from our Github:
 1. Navigate to the 'NevilleElieh.github.io' folder
 
    Here you will find:
-   JSON
-   Assets
-   Scripts
-   Style
+   JSON,
+   Assets,
+   Scripts,
+   Style,
    Index.html
+   Folders containing all the content that make up our Github Page for this project.
 
 ## Frontend Setup at Home
 *Unreleased*
