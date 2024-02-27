@@ -47,6 +47,7 @@ localhost:5000
 ---
 ## Version 1 of Current Live Web Application
 
+This folder contains files that are crucial for the backend server and the frontend display. Contains files including images and templates.
 1. Navigate to the `/AstroCultivators/WebApp_BackEnd/astrocultivators_r1` folder.
 2. Run the following command:
    python astrocultivators_web.py
