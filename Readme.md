@@ -8,6 +8,8 @@
 AstroCultivators is an autonomous farming system designed to facilitate the growth of self-pollinating crops with minimal human intervention. By incorporating features such as autonomous monitoring, real-time data reporting, environment management, automatic harvesting, and cleaning, this system aims to streamline plant growth operations and reduce the need for manual labor.
 
 ---
+
+![Headliner image](Headliner.png)
 ## Project Maintenence
 
 - **Main**:
