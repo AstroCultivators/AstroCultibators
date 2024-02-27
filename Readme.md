@@ -30,14 +30,14 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
 
 To activate the virtual environment:
 
-1. Navigate to the `Astrocultivator_Web_App` folder in your terminal.
+1. Navigate to the `Astrocultivator_Web_App` folder.
 2. Run the following command:
 .venv\Scripts\activate
 
 
 To run the website in debug mode:
 
-1. Navigate to the `Astrocultivator_Web_App` folder in your terminal.
+1. Navigate to the `Astrocultivator_Web_App` folder.
 2. Run the following command:
 python run.py
 
