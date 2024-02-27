@@ -6,14 +6,19 @@ AstroCultivators - Codi Yost, Neville Elieh, Sandra Davis
   
 		Sensor Data Code - Codi
 	
-	When should group members merge the main branch to their working branches (if your group members are not working on the main branch)?
-		When changes are significant and stable. After proper testing has been done on the individual branch's changes and code has been reviewed
+	 
+The autonomous farming system could be used to grow self-pollinating crops that require no human intervention. This system can decrease crew time needed to operate plant growth systems in by providing autonomous monitoring, real-time data reporting, environment management, automatic harvesting, and cleaning.
 
-	Who is responsible for send pull request to merge the code back to the main/test branch?
-		Group leader Neville will manage merges to main but code should be maintained and up to date when possible in branches by that branches managing student
+to activate the virtual environment:
+    have the Astrocultivator_Web_App folder open in terminal
+    run command
+        .venv\Scripts\activate
 
-	Who will be responsible to process the pull request to merge branches?
-		Group Leader Neville will oversee merge requests
-
-	What are the rules that your group members should follow when writing commit messages for your project?
-		Messages should be short and consise as to what changes were made and why if the changes are unclear as to the effect of the project.
+to run the website in debug mode:
+    have the Astrocultivator_Web_App folder open in terminal
+    run command
+        python run.py
+    
+    website will run locally on port 5000
+    type into any browser:
+        localhost:5000
