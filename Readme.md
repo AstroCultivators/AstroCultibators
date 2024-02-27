@@ -1,6 +1,5 @@
 AstroCultivators - Codi Yost, Neville Elieh, Sandra Davis
 
-	How many branches will you maintain, and what is each branch used for and who will be working on them?
 		Main - For release, or newest release of project - Maintained by Neville
   
 		Web Application - Sandra
