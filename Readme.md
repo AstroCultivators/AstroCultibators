@@ -10,6 +10,15 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
 ---
 
 ![Headliner image](Headliner.png)
+## Developer Tools
+![nVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white)  <br> 
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)  <br>
+![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)  <br>
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)  <br>
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  <br>
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)  <br>
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)  <br>
+
 ## Project Maintenence
 
 - **Main**:
@@ -25,6 +34,7 @@ AstroCultivators is an autonomous farming system designed to facilitate the grow
   - Codebase responsible for collecting and processing sensor data.
 
 --- 
+
 ## Repository Setup  
 ```+---.vscode
 +---bme_sensor
