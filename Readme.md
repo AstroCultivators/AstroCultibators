@@ -102,5 +102,6 @@ The contents of this folder pertains to all operations of the BME Sensor. Contai
    You will find python scripts for the sensor, sensor data, sample data, and notes.
 
 ## Live Demo of Version 1 of the Web Application
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/RhembzzXALg/0.jpg)](https://www.youtube.com/watch?v=RhembzzXALg)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/NAGFOsAXRy4/0.jpg)](https://www.youtube.com/watch?v=NAGFOsAXRy4)
+
 
