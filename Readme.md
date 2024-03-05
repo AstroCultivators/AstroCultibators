@@ -75,7 +75,8 @@ localhost:5000
 ---
 ## Version 1 of Current Live Web Application
 
-This folder contains files that are crucial for the backend server and the frontend display. Contains files including images and templates.
+This folder contains files that are crucial for the backend server and the frontend display. Contains files including images and templates. Following must be implemented on the Jetson Orin because it is the host server for the web application.
+
 1. Navigate to the `/AstroCultivators/WebApp_BackEnd/astrocultivators_r1` folder.
 2. Run the following command:
    python astrocultivators_web.py
@@ -89,3 +90,6 @@ The contents of this folder pertains to all operations of the BME Sensor. Contai
    1. Navigate to `BME_Sensor` folder.
         
    You will find python scripts for the sensor, sensor data, sample data, and notes.
+
+## Live Demo of Version 1 of the Web Application
+https://youtu.be/RhembzzXALg
