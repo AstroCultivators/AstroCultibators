@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div id="side" class="container col-4 border">
+            
+            <h2 class="text-uppercase">terminal</h2>
+            <textarea name="form-control" id="" cols="40" rows="10"></textarea>
+            
+            <h2 class="text-uppercase">plant health</h2>
+            <p class="bg-secondary bg-gradient p-3 font-monospace text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias debitis officiis voluptates nobis aspernatur praesentium, ullam quod id! Iusto, ratione? Qui distinctio dicta quibusdam eos pariatur dolores deserunt maiores dolorem rem reiciendis similique dignissimos velit quaerat, voluptate blanditiis voluptatem delectus, sequi laudantium inventore! Omnis hic vero in unde ullam nulla.</p>
+            <div class="row justify-content-around">
+                <button class="btn rounded btn-lg btn-outline-primary text-uppercase">Reset</button>
+                <button class="btn rounded btn-lg btn-danger text-uppercase">STOP</button>
+            </div>
+        </div>
+        <main class="container col-8 border">
+            <img src={{ sensor_data_figure }} />
+            <button class="btn btn-primary">Show Data</button>
+            <div class="row justify-content-center align-items-center image-container border">
+                <div class="col border">
+                    <div class="img-container"><img src="{{ rgb_image }}" alt=""></div>
+                    <div class="img-title">RBG</div>
+                </div>
+                <div class="col border">
+                    <div class="img-container">img</div>
+                    <div class="img-title">Hyper</div>
+                </div>
+                <div class="col border">
+                    <div class="img-container"><img src="{{ objdet_image }}" alt=""></div>
+                    <div class="img-title">Obj Det</div>
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="row border">
+        <div class="col-12 display-4 text-center">Container Schedule</div>
+    </div>
+</div>
+
+{% endblock content %}
