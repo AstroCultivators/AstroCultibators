@@ -19,8 +19,9 @@ def home():
     data = base64.b64encode(buf.getbuffer()).decode('ascii')
 
     return render_template('home.html', 
-                           rgb_image=url_for('static', filename='images/RGB_Images/Straight_1.png'), 
-                           objdet_image=url_for('static', filename='images/Object Detected Photo/Straight 1.png'),
+                           rgb_image=url_for('static', filename='images/rgb/test.png'), 
+                           objdet_image=url_for('static', filename='images/object_detection/test.png'),
+                           hyperspectral_image=url_for('static', filename='images/hyperspectral/test.png'),
                            sensor_data_figure=f'data:image/png;base64,{data}')
 
 @app.route("/csv")
