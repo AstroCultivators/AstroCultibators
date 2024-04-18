@@ -42,5 +42,7 @@ def get_figure():
     fig.tight_layout()
     fig.align_ylabels()
     fig.autofmt_xdate()
+    
+    # print(data.tail)
 
     return fig
