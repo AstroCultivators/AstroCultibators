@@ -6,8 +6,10 @@ socket.on('connect', () => {
 socket.on('update-chart', (sensorData) => {
 
     sensorChartFigure = document.getElementById('sensor-data-figure')
-    console.log(sensorChartFigure.innerHTML)
-    sensorChartFigure.innerHTML = `<img src='${sensorData}'>`
+    console.log(sensorChartFigure.src)
+    sensorChartFigure = document.createElement('img')
+    sensorChartFigure.setAttribute('id', 'sensor-data-figure')
+    sensorData.src = sensorData
     
 });
 

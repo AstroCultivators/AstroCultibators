@@ -1,3 +1,4 @@
 __pycache__
 /astrocultivators/__pycache__
 /.venv/lib/site-packages/__pycache__
+/.venv/lib/site-packages/pandas/io/formats/__pycache__

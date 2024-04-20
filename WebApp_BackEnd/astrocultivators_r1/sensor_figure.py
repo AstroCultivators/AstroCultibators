@@ -16,7 +16,7 @@ def get_figure():
     # read in .csv data
     data = pd.read_csv('test_seconds.csv', header=None)
 
-    timestamp = pd.to_datetime(data[0])
+    timestamp = pd.to_datetime(data[0], format='mixed')
     temp = data[1]
     humid = data[2]
     pres = data[3]
