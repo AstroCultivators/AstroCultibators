@@ -46,3 +46,13 @@ def get_figure():
     # print(data.tail)
 
     return fig
+'''
+Gets the most recent figure data 
+current_data = [Time, Temprature, Humidity, Pressure]
+'''
+def get_current_data():
+
+    data = pd.read_csv('test_seconds.csv', header=None)
+    current_data = data.values[-1].tolist()
+
+    return current_data
