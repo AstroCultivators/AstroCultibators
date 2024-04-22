@@ -1,0 +1,9 @@
+__pycache__
+/astrocultivators/__pycache__
+/.venv/lib/site-packages/__pycache__
+<<<<<<< HEAD
+/.venv/Lib/site-packages/pandas/__pycache__
+/.venv/Lib/site-packages/pandas/io/__pycache__
+=======
+/.venv/lib/site-packages/pandas/io/formats/__pycache__
+>>>>>>> Websocket
