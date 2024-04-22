@@ -1,23 +1,30 @@
 var socket = io();
-
-socket.on('update-chart', (sensorData, currentData) => {
-
-    sensorChartFigure = $('#sensor-data-figure')
-    console.log(sensorData.sensorData)
-    sensorChartFigure = document.createElement('img')
-    sensorChartFigure.setAttribute('id', 'sensor-data-figure')
-    sensorChartFigure.src = sensorData.sensorData
-    socket.emit('update-current', currentData)
+socket.on('connect', () => {
+    console.log('Connected')
 });
 
-socket.on('update-current', (currentData) => {
-    currentTime = $('#current-time')
-    currentTemp = $('#current-temp')
-    currentHumidity = $('#current-humidity')
-    currentPressure = $('#current-pressure')
+socket.on('update-chart', (sensorData) => {
+    console.log(`update chart js ${sensorData.sensorData}`)
+    sensorDataContainer = document.getElementById('sensor-data-container');
+    sensorDataContainer.innerHTML = `<img id="sensor-data-figure" src=${'../figure.png'} />`
+    
+    socket.emit('update-current', sensorData.currentData);
+});
 
-    currentTime.textContent = currentData[0]
-    currentTemp.textContent = currentData[1]
-    currentHumidity.textContent = currentData[2]
-    currentPressure.textContent = currentData[3]
+socket.on('update-current', (mostCurrent) => {
+    console.log(`update current js ${mostCurrent}`)
+    currentTime = document.getElementById('current-time')
+    currentTemp = document.getElementById('current-temp')
+    currentHumidity = document.getElementById('current-humidity')
+    currentPressure = document.getElementById('current-pressure')
+
+    currentTime.innerHTML = mostCurrent[0]
+    currentTemp.innerHTML = mostCurrent[1]
+    currentHumidity.innerHTML = mostCurrent[2]
+    currentPressure.innerHTML = mostCurrent[3]
 })
+
+setInterval(() => {
+    socket.emit('update')
+    console.log('update sent')
+}, 1000); 
