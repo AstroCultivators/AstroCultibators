@@ -22,8 +22,8 @@ def detect(save_img=False):
         ('rtsp://', 'rtmp://', 'http://', 'https://'))
 
     # Directories
-    save_dir = Path("C:/Users/Neville/Desktop/ARCS Program/Yolov7 Lettuce/yolov7-custom/Detected")  # increment run
-    (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
+    save_dir = Path("C:/Users/Neville/Documents/GitHub/AstroCultivators2/yolov7-custom/Detected")  # increment run
+    (save_dir if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
 
     # Initialize
     set_logging()
@@ -105,7 +105,7 @@ def detect(save_img=False):
 
             p = Path(p)  # to Path
             save_path = str(save_dir / p.name)  # img.jpg
-            txt_path = str(save_dir / 'labels' / p.stem) + ('' if dataset.mode == 'image' else f'_{frame}')  # img.txt
+            txt_path = str(save_dir / p.stem) + ('' if dataset.mode == 'image' else f'_{frame}')  # img.txt
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
             if len(det):
                 # Rescale boxes from img_size to im0 size
@@ -116,13 +116,21 @@ def detect(save_img=False):
                     n = (det[:, -1] == c).sum()  # detections per class
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
 
+                    
                 # Write results
+                
                 for *xyxy, conf, cls in reversed(det):
                     if save_txt:  # Write to file
+                    # Convert xyxy to xywh
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
-                        line = (cls, *xywh, conf) if opt.save_conf else (cls, *xywh)  # label format
+                    # Get center coordinates from xywh
+                        center_x = int((xywh[0] * im0.shape[1]) + (xywh[2] * im0.shape[1]) / 2)
+                        center_y = int((xywh[1] * im0.shape[0]) + (xywh[3] * im0.shape[0]) / 2)
+                    # Write to file
+                        line = (cls, center_x, center_y, conf) if opt.save_conf else (cls, center_x, center_y)  # label format
                         with open(txt_path + '.txt', 'a') as f:
                             f.write(('%g ' * len(line)).rstrip() % line + '\n')
+
 
                     if save_img or view_img:  # Add bbox to image
                         label = f'{names[int(cls)]} {conf:.2f}'
