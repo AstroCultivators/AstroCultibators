@@ -15,11 +15,11 @@ def handle_connect():
 @socket.on('update')
 def handle_update():
     fig = get_figure()
-    figure_location = url_for('home', filename='figure.png')
-    fig.savefig('figure.png', format="png")
+    figure_location = url_for('static',filename='figure.png')
+    fig.savefig(figure_location)
 
-    # emit('update-chart', { 'image': True, 'sensorData': figure_location, 'currentData': get_current_data() }, broadcast=True)
-    emit('update-current', get_current_data(), broadcast=True)
+    emit('update-chart', { 'image': True, 'sensorData': figure_location, 'currentData': get_current_data() }, broadcast=True)
+    # emit('update-current', get_current_data(), broadcast=True)
 
 @app.route("/")
 @app.route("/home")
@@ -29,6 +29,8 @@ def home():
     # save to a buffer
     buf = BytesIO()
     fig.savefig(buf, format="png")
+    figure_location = url_for('static',filename='figure.png')
+    fig.savefig(figure_location)
 
     # Embed saved fig in html output
     data = base64.b64encode(buf.getbuffer()).decode('ascii')    
