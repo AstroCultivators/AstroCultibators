@@ -16,7 +16,7 @@ def get_figure():
     # read in .csv data
     data = pd.read_csv('test_seconds.csv', header=None)
 
-    timestamp = pd.to_datetime(data[0], format='mixed')
+    """ timestamp = pd.to_datetime(data[0], format='mixed')
     temp = data[1]
     humid = data[2]
     pres = data[3]
@@ -43,9 +43,9 @@ def get_figure():
     fig.align_ylabels()
     fig.autofmt_xdate()
     
-    # print(data.tail)
+    # print(data.tail) """
 
-    return fig
+    return [data[0].to_list(), data[1].to_list(), data[2].to_list(), data[3].to_list()]
 '''
 Gets the most recent figure data 
 current_data = [Time, Temprature, Humidity, Pressure]
@@ -56,3 +56,15 @@ def get_current_data():
     current_data = data.values[-1].tolist()
 
     return current_data
+
+def get_time_data():
+    return pd.read_csv('test_seconds.csv', header=None)[0].to_list()
+
+def get_temperature_data():
+    return pd.read_csv('test_seconds.csv', header=None)[1].to_list()    
+
+def get_humidity_data():
+    return pd.read_csv('test_seconds.csv', header=None)[2].to_list()
+
+def get_pressure_data():
+    return pd.read_csv('test_seconds.csv', header=None)[3].to_list()

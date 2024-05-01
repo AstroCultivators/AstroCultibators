@@ -7,3 +7,6 @@ __pycache__
 =======
 /.venv/lib/site-packages/pandas/io/formats/__pycache__
 >>>>>>> Websocket
+WebApp_BackEnd/astrocultivators_r1/.venv/Lib/site-packages/pip/_internal/__pycache__/__init__.cpython-311.pyc
+*.pyc
+*.pyc
