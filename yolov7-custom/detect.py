@@ -22,7 +22,7 @@ def detect(save_img=False):
         ('rtsp://', 'rtmp://', 'http://', 'https://'))
 
     # Directories
-    save_dir = Path("C:/Users/Neville/Documents/GitHub/AstroCultivators2/yolov7-custom/Detected")  # increment run
+    save_dir = Path("../WebApp_BackEnd/astrocultivators/static/images/object_detection")  # increment run
     (save_dir if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
 
     # Initialize
