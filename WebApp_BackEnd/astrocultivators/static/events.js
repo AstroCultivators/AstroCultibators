@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Sensor chart containers
 const temperatureContainer = document.getElementById('temperature').getContext('2d');
 const pressureContainer = document.getElementById('pressure').getContext('2d');
@@ -10,6 +11,14 @@ var humidityChart;
 var rgbImage = document.getElementById('rgb-image');
 var objDetImage = document.getElementById('objdet-image');
 var hyperspectralImage = document.getElementById('hyperspectral-image');
+=======
+const temperatureContainer = document.getElementById('temperature').getContext('2d');
+const pressureContainer = document.getElementById('pressure').getContext('2d');
+const humidityContainer = document.getElementById('humidity').getContext('2d');
+var temperatureChart;
+var pressureChart;
+var humidityChart
+>>>>>>> 0828e656db4402c5745e998fc655c1581b7676a3
 
 var socket = io();
 socket.on('connect', () => {
@@ -52,12 +61,15 @@ socket.on('update-current', (mostCurrent) => {
     currentPressure.innerHTML = mostCurrent[3];
 })
 
+<<<<<<< HEAD
 socket.on('update-recent-images', (images) => {
     rgbImage.src = images[0];
     objDetImage.src = images[1];
     hyperspectralImage.src = images[2];
 })
 
+=======
+>>>>>>> 0828e656db4402c5745e998fc655c1581b7676a3
 function handlePictureButton() {
     console.log('Button Pressed')
     socket.emit('take-picture')
