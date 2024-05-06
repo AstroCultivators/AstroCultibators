@@ -1,12 +1,8 @@
-__pycache__
-/astrocultivators/__pycache__
-/.venv/lib/site-packages/__pycache__
-<<<<<<< HEAD
-/.venv/Lib/site-packages/pandas/__pycache__
-/.venv/Lib/site-packages/pandas/io/__pycache__
-=======
-/.venv/lib/site-packages/pandas/io/formats/__pycache__
->>>>>>> Websocket
-WebApp_BackEnd/astrocultivators_r1/.venv/Lib/site-packages/pip/_internal/__pycache__/__init__.cpython-311.pyc
-*.pyc
-*.pyc
+
+###Ignore Virtual Environment dependencies###
+/WebApp_BackEnd/.venv
+/yolov7-custom/yolov7_custom
+
+###Ignore all pycache###
+**/__pycache__/
+
